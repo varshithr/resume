@@ -158,8 +158,7 @@
 \newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}} % Phone Number
 \newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{11.5pt} %Head of Education and exp Font size
-{1em}\bodyfont\bfseries\color{blue}\@sectioncolor #1}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{11.5pt}{1em}{\robotobold}\color{blue}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12.5pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{12.5pt}{1em}\bodyfontlight\upshape\color{text}}
 
@@ -378,7 +377,7 @@
 \newcommand{\acvHeaderAfterPositionSkip}{.4mm}
 \newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
-\newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\newcommand{\acvHeaderSocialSep}{\hspace{0.5em}\textbar\hspace{0.5em}}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
@@ -686,7 +685,7 @@
   \vspace{-2mm}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{16.5cm} C{3cm} R{2.5cm}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} C{3cm} R{2.5cm}}
 }{%
     \end{tabular*}
 }
@@ -704,7 +703,7 @@
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{6cm} p{11cm}}
 }{%
     \end{tabular*}
   \end{center}
