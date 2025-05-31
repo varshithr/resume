@@ -55,7 +55,6 @@
 % Needed to use icons from font-awesome
 \RequirePackage{fontawesome5}
 \RequirePackage{roboto}
-\RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
@@ -75,9 +74,6 @@
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
-% Configure an optional directory location for fonts(default: 'fonts/')
-% Not required anymore but left in place for backward compatability.
-\newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
 
 %-------------------------------------------------------------------------------
 %                Configuration for layout
@@ -144,67 +140,52 @@
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
-% \newcommand*{\headerfont}{\roboto}
-% \newcommand*{\headerfontlight}{\robotolight}
-% \newcommand*{\footerfont}{\sourcesanspro}
-% \newcommand*{\bodyfont}{\sourcesanspro}
-% \newcommand*{\bodyfontlight}{\sourcesansprolight}
-% \documentclass{article}
-\usepackage{newtxtext} % Times Roman font
-\usepackage{xcolor}
-\newcommand*{\bodyfont}{\rmfamily} % Times Roman
-
-
-% \renewcommand*{\rmdefault}{ua1} % Arial as the default font
-
-% Define bodyfont command
-
-\newcommand*{\headerfont}{\fontfamily{ua1}\selectfont} % Arial
-\newcommand*{\headerfontlight}{\fontfamily{ua1l}\selectfont} % Arial Light
-\newcommand*{\footerfont}{\fontfamily{ua1}\selectfont} % Arial
-% \newcommand*{\bodyfont}{\fontfamily{ua1}\selectfont} % Arial
-\newcommand*{\bodyfontlight}{\fontfamily{ua1l}\selectfont} % Arial Light
+\newcommand*{\headerfont}{\roboto}
+\newcommand*{\headerfontlight}{\robotolight}
+\newcommand*{\footerfont}{\roboto}
+\newcommand*{\bodyfont}{\roboto}
+\newcommand*{\bodyfontlight}{\robotolight}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{15pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerlastnamestyle}[1]{{\fontsize{15pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{russell-black} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{8pt}{1em}\headerfont\color{text} #1}} % Phone Number
-\newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{16pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerlastnamestyle}[1]{{\fontsize{16pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{8.5pt}{1em}\bodyfont\scshape\color{russell-black} #1}}
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\itshape\color{lighttext} #1}}
+\newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}} % Phone Number
+\newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{10.5pt} %Head of Education and exp Font size
+\newcommand*{\sectionstyle}[1]{{\fontsize{11.5pt} %Head of Education and exp Font size
 {1em}\bodyfont\bfseries\color{blue}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{12pt}{1em}\bodyfontlight\upshape\color{text}} 
+\newcommand*{\subsectionstyle}[1]{{\fontsize{12.5pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{12.5pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\bfseries\color{text} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\color{black} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{black} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9.5pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfontlight\upshape\color{black} #1}} % Content under Experience and Projects
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{11.5pt}{1em}\bodyfont\bfseries\color{text} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\color{black} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfontlight\slshape\color{black} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10.5pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{11pt}{1em}\bodyfontlight\upshape\color{black} #1}} % Content under Experience and Projects
 
 % For elements of subentry
-\newcommand*{\subentrytitlestyle}[1]{{\fontsize{7.2pt}{1em}\bodyfont\mdseries\color{black} #1}}
-\newcommand*{\subentrypositionstyle}[1]{{\fontsize{6.3pt}{1em}\bodyfont\scshape\color{black} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{6.3pt}{1em}\bodyfontlight\slshape\color{black} #1}}
-\newcommand*{\subentrylocationstyle}[1]{{\fontsize{6.3pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
-\newcommand*{\subdescriptionstyle}[1]{{\fontsize{7.2pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{black} #1}}
+\newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{black} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{black} #1}}
+\newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
+\newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\color{black} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{11.5pt}{1em}\bodyfont\color{black} #1}}
 % \newcommand*{\honorpositionstyle}[1]{{\fontsize{19pt}{1em}\bodyfont\bfseries\color{text} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9.5pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{10.5pt}{1em}\bodyfont\color{graytext} #1}}
 % \newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{russell} #1}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{9pt}{0em}\bodyfont\color{black} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{black} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{0em}\bodyfont\color{black} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{black} #1}}
 
 % For elements of the cover letter
 \newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
@@ -661,7 +642,7 @@
 % Define an entry of cv information : Experience
 % Usage: \cventry{<position>}{<date>}{<description>}
 \newcommand*{\cventrynew}[3]{%
-  \vspace{-1.0mm}
+  \vspace{1mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -673,7 +654,7 @@
 }
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- 
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}
@@ -736,7 +717,7 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-2mm} % spacing after title and above each project/experience description
+  \vspace{0.5mm} % spacing after title and above each project/experience description
   \begin{justify}
   \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
     \setlength{\parskip}{1pt} % minimal additional spacing between items
@@ -744,7 +725,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-2mm} % spacing after each project/experience description
+  \vspace{0.5mm} % spacing after each project/experience description
 }
 
 
