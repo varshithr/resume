@@ -85,12 +85,13 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-{\footnotesize
+% Removed \footnotesize wrapper as font sizes are now globally managed by russell.cls
 \input{cv/summary.tex}
+\input{cv/skills.tex}
 \input{cv/education.tex}
 \input{cv/experience.tex}
-\input{cv/skills.tex}
+\input{cv/certifications.tex}
 \input{cv/projects.tex}
-}
+\input{cv/interests.tex}
 %-------------------------------------------------------------------------------
 \end{document}
